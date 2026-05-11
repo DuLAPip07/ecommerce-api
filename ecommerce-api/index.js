@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/products', require('./routes/productRoutes'));
+app.use('/api/cart', require('./routes/cartRoutes'));
 
 app.get('/', (req, res) => {
   res.json({ message: 'E-Commerce API is running!' });
